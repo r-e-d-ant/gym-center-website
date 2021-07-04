@@ -1,0 +1,609 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Tangerine&display=swap');
+
+/* ----------------- EXTERNALS LINKS ---------------- */
+*,
+*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ------------------------------------------------ */
+
+/* ----------------- VARIABLES  ------------------- */
+:root {
+    --primary-color: #7B5266;
+    --primary-color-alt: #8C7088;
+    --white-color: #E0E9F5;
+}
+/* ------------------------------------------------ */
+
+/* ---------------------- BASE ------------------- */
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.icon__link {
+    cursor: pointer;
+}
+.container {
+    padding: .5em 1em;
+}
+/* -------------------- BODY ----------------------- */
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    background-color: var(--white-color);
+    scroll-behavior: smooth;
+}
+/* ------------------------------------------------ */
+
+/* ------------------- HEADER -------------------- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 1rem;
+}
+.bx-dumbbell {
+    color: var(--primary-color-alt);
+    font-size: 40px;
+}
+.social__medias_container {
+    margin: .5em 0;
+}
+.social_media_link {
+    font-size: 2.2rem;
+    margin:0 .2em;
+    transition: .2s color;
+}
+.gym__name_container {
+    display: none;
+}
+.gym__name_top {
+    color: var(--primary-color);
+    font-size: 22px;
+}
+.navbar {
+    display: none;
+    transition: 1000ms display;
+}
+.show_d_flex {
+    display: flex;
+}
+.show_d_block {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.nav__items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav__item {
+    margin: .5em 0;
+}
+.nav__link {
+    color: var(--primary-color);
+    letter-spacing: .1em;
+    font-size: 20px;
+    margin: 0 1em;
+}
+.nav__link:hover {
+    color: var(--primary-color-alt);
+}
+.bx-x, .nav__icons_menu, .social__medias_container {
+    display: block;
+}
+.bx-menu {
+    font-size: 40px;
+    color: var(--primary-color);
+}
+.bx-x {
+    margin-top: .5em;
+    font-size: 48px;
+    transition: .2s color;
+}
+
+/* ---- media query for the navbar -----*/
+@media screen and (max-width: 767px){
+    .navbar {
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        background-color: #8c7088;
+        z-index: 1;
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 12%);
+    }
+    .nav__items {
+        margin-top: 1em;
+        line-height: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav__link {
+        color: var(--white-color);
+        transition: .2s color;
+    }
+    .bx-x, .social__medias_container {
+        color: var(--white-color);
+    }
+    .nav__link:hover, .bx-x:hover, .social_media_link:hover {
+        color: #e4cfe1;
+    }
+}
+/* ------------------------------------------------ */
+
+/* ----------------------- MAIN -------------------- */
+/* ----------------------- SECTION-1 ---------------- */
+.section_1 {
+    height: 100vh;
+}
+.gym_name_and_slogan_n_image {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+}
+.home__image {
+    position: relative;
+}
+
+.home_image_img img {
+    opacity: .9;
+    
+}
+.gym_name {
+    color: var(--primary-color);
+    padding-bottom: 1em;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+}
+.slogan {
+    color: var(--primary-color-alt);
+    font-size: 1.25rem;
+    letter-spacing: .1rem;
+    margin-bottom: 1.5rem;
+    width: 15rem;
+}
+
+.home__buttons {
+    grid-area: home__buttons;
+    margin: 1rem 0;
+}
+.home__buttons div {
+    display: flex;
+    align-items: center;
+}
+.btn__home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 8rem;
+    padding: .5rem 0;
+
+    color: var(--primary-color);
+    background: var(--white-color);
+    border: 1px solid #FFFFFF;
+    box-shadow: 6px 2px 16px 0 #FFFFFF, -6px -2px 16px 0 #88A5BF;
+    border-radius: 4px;
+}
+.sec {
+    margin-left: 3rem;
+}
+.day {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    letter-spacing: .05rem;
+}
+.hour {
+    color: var(--primary-color-alt);
+    margin-top: .8rem;
+    letter-spacing: .1rem;
+}
+/* ------------------------------------------------ */
+
+/* ----------------------- SECTION-2 ---------------- */
+.section_2 {
+    position: relative;
+    overflow: hidden;
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/back_img.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.section_2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #292027a9;
+    opacity: .7;
+}
+.quote {
+    position: relative;
+    color:rgb(246, 250, 255);
+    text-align: center;
+    width: 20rem;
+    padding: 1rem .5rem;
+}
+.quote__text {
+    margin-bottom: 1.5rem;
+    font-size: 20px;
+    letter-spacing: .005rem;
+    line-height: 1.5rem;
+}
+.quote__text span {
+    text-decoration: underline;
+    text-decoration-color: #99828d;
+}
+.quote__author {
+    color: #e0e9f5d7;
+}
+/* ------------------------------------------------- */
+
+/* ----------------------- SECTION-3 --------------- */
+.section_3 {
+    margin: 5rem .1rem;
+}
+.mySlides {
+    cursor: all-scroll;
+    position: relative;
+    margin: 0 .5rem;
+}
+.mySlides img {
+    width: 50vh;
+    border-radius: 4px;
+}
+
+/* Slideshow container */
+.slideshow {
+    border-radius: 4px;
+    display: flex;
+    overflow-x: scroll;
+}
+
+
+/* ------------------------------------------------- */
+
+/* ---------------------- SECTION-4 --------------------------- */
+.section_4 {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.title_about {
+    color: #8a6a7a;
+    font-size: 2rem;
+    letter-spacing: .2rem;
+}
+.line_break_about_title {
+    width: 100%;
+    height: auto;
+    margin: 1em 0;
+}
+.about_text {
+    width: 20rem;
+    font-size: 1.30rem;
+    line-height: 1.9rem;
+    letter-spacing: .1rem;
+    color:rgb(126, 94, 109);
+}
+.caracteristics {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.bullet {
+    color: var(--primary-color-alt);
+    opacity: .5;
+}
+.caracteristic {
+    margin: 0 .5rem;
+    color:rgb(126, 94, 109);
+}
+/* ------------------------------------------------- */
+
+/* ------------------------ FOOTER ---------------- */
+.section_5 {
+    position: relative;
+    overflow: hidden;
+    margin-top: 5rem;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    background-image: url(../images/slide_1.jpg);
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.section_5::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #251d249c;
+}
+.over_img {
+    z-index: 1;
+}
+.join_us {
+    color: var(--white-color);
+    font-size: 24px;
+}
+.social_media_links_footer {
+    margin-top: 1.5rem;
+}
+.footer_icon_link {
+    font-size: 28px;
+    color: var(--white-color);
+    margin: 0 2rem;
+}
+.contacts_n_map__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contacts {
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+.email, .phone, .address {
+    display: flex;
+    align-items: center;
+    margin: 1.8rem 0;
+}
+.bx-envelope, .bx-phone, .bx-pin {
+    margin-right: 1rem;
+}
+/* ------------------------------------------------ */
+
+/* -- footer end ---- */
+
+.endfooter_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.gym_name_n_copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7B5266;
+    color: #ddd2d7;
+    width: 100%;
+    padding: .2rem 0;
+}
+.gym__name {
+    margin-bottom: .5rem;
+    font-size: 14px;
+}
+.copyright {
+    font-size: 14px;
+}
+.designer {
+    background-color: #472c39;
+    color: #99828d;
+    text-align: center;
+    font-size: 22px;
+    font-family: 'Tangerine', cursive;
+    letter-spacing: .1rem;
+    width: 100%;
+    padding: .2rem 0;
+}
+/* -- endfooter --*/
+/* ------------------------------------------------ */
+
+
+/* ----------------- MEDIA QUERIES ---------------- */
+@media screen and (min-width: 481px){
+    /* ------------------- HEADER -------------------- */
+    /* ----------------------- MAIN -------------------- */
+    /* ----------------------- SECTION-1 ---------------- */
+    .slogan {
+        color: var(--primary-color-alt);
+        font-size: 1.25rem;
+        letter-spacing: .15rem;
+        line-height: 1.9rem;
+        margin-bottom: 1.5rem;
+        width: 30rem;
+    }
+    .home__buttons {
+        margin-top: 3rem;
+    }
+    /* ----------------------- SECTION-2 ---------------- */
+    .section_2 {
+        margin-top: 20rem;
+    }
+    /* ---------------------- SECTION-4 --------------------------- */
+    .section_4 {
+        height: 80vh;
+    }
+    .title_about {
+        color: #8a6a7a;
+        font-size: 1.9rem;
+        letter-spacing: .2rem;
+    }
+    .about_text {
+        width: 30rem;
+        font-size: 1.25rem;
+        line-height: 2.5rem;
+        letter-spacing: .1rem;
+        color:rgb(126, 94, 109)6;
+    }
+    .caracteristics {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (min-width: 768px){
+    /* ------------------- HEADER -------------------- */
+    .navbar {
+        display: flex;
+    }
+    .nav__link {
+        font-size: 22px;
+    }
+    .bx-x, .nav__icons_menu, .social__medias_container {
+        display: none;
+    }
+    .gym_name_and_menu_icon {
+        display: none;
+    }
+    /* ----------------------- MAIN -------------------- */
+    /* ----------------------- SECTION-1 ---------------- */
+    .gym_name_and_slogan_n_image {
+        grid-template-columns: 1fr 1fr;
+    }
+    .gym_name_and_slogan {
+        margin-top: 5rem;
+    }
+    .slogan {
+        letter-spacing: .15rem;
+        line-height: 1.9rem;
+        width: 30rem;
+    }
+    .home__buttons {
+        margin-top: 3rem;
+    }
+    /* ----------------------- SECTION-2 ---------------- */
+    .section_2 {
+        margin-top: 0;
+    }
+    .quote__text {
+        font-size: 18px;
+        letter-spacing: .01rem;
+        line-height: 1.8rem;
+    }
+    /* ----------------------- SECTION-3 --------------- */
+    .section_3 {
+        margin: 5rem 3rem;
+    }
+    /*--*/
+
+    /* ---------------------- SECTION-4 --------------------------- */
+    .title_about {
+        color: #8a6a7a;
+        font-size: 1.9rem;
+    }
+    .about_text {
+        width: 30rem;
+        font-size: 1.25rem;
+        line-height: 2.5rem;
+        color:rgb(126, 94, 109);
+    }
+    .caracteristics {
+        font-size: 1.4rem;
+    }
+    /* ---------------------- SECTION-5 ---------- */
+    .section_5 {
+        padding: 8rem 5rem;
+        display: flex;
+    }
+    .join_us {
+        font-size: 32px;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        color: var(--white-color);
+        letter-spacing: .15rem;
+    }
+    .social_media_links_footer {
+        margin-top: 1.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    iframe {
+        width: 500px;
+        height: 250px;
+        border-radius: 5px;
+    }
+    .footer_icon_link {
+        font-size: 28px;
+        color: var(--white-color);
+        margin: 0 2rem;
+    }
+    .contacts_n_map__container {
+        justify-content: space-between;
+    }
+    .contacts {
+        display: flex;
+        flex-direction: row;
+        margin: 1rem 0;
+    }
+    .email, .phone, .address {
+        display: flex;
+        align-items: center;
+        margin: 3rem 0;
+        font-size: 14px;
+    }
+    .bx-envelope, .bx-phone, .bx-pin {
+        margin: 0 1rem;
+    }
+    /* -- footer end ---- */
+    .gym_name_n_copyright {
+        flex-direction: row;
+        justify-content: center;
+    }
+    .gym__name {
+        margin-bottom: 0;
+        margin-right: .5rem;
+        font-size: 12px;
+    }
+    .designer {
+        background-color: #472c39;
+        color: #99828d;
+    }
+}
+@media screen and (min-width: 1201px){
+    /* ----------------------- SECTION-2 ---------------- */
+    .section_2 {
+        margin-top: 10rem;
+    }
+}
+/* ------------------------------------------------ */
+
+
+
+/* ----------------- - ---------------- */
+/* ------------------------------------------------ */
+
+/* ----------------- - ---------------- */
+/* ------------------------------------------------ */
+
+/* ----------------- - ---------------- */
+/* ------------------------------------------------ */
