@@ -475,10 +475,13 @@ body {
     .navbar {
         display: flex;
     }
+    .navbar .bx-x {
+        display: none;
+    }
     .nav__link {
         font-size: 22px;
     }
-    .bx-x, .nav__icons_menu, .social__medias_container {
+    .nav__icons_menu, .social__medias_container {
         display: none;
     }
     .gym_name_and_menu_icon {
